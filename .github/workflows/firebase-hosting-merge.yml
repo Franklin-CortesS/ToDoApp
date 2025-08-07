@@ -25,7 +25,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: ToDoApp
-        run: npm ci --prefer-offline=false --no-cache
+        run: npm i
 
       - name: Rebuild lightningcss native binary
         working-directory: ToDoApp
