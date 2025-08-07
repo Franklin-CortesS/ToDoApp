@@ -13,7 +13,6 @@ export class Logout implements OnInit {
   constructor(private alertsService: AlertsService) { }
 
   ngOnInit() {
-    console.log("here lg")
     this.alertsService.showConfirmAndNavigate('info', 'Logged Out', 'You have been logged out successfully.', "/login");
   }
 }

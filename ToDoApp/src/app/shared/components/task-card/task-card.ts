@@ -11,6 +11,7 @@ import { NavigationService } from '../../../core/services/navigation/navigation.
 @Component({
   selector: 'app-task-card',
   imports: [Button],
+  standalone: true,
   templateUrl: './task-card.html',
   styleUrl: './task-card.scss'
 })

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ApiPathsService } from '../api-paths/api-paths.service.';
+import { ApiPathsService } from '../api-paths/api-paths.service';
 import { ApiService } from '../api/api.service';
 import { IRootStateModel } from '../../../state/models/states/root.state.model';
 import { Store } from '@ngrx/store';
