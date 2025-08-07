@@ -32,4 +32,3 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TODOAPP_FCS2499 }}
           channelId: live
           projectId: todoapp-fcs2499
-          entryPoint: ToDoApp
