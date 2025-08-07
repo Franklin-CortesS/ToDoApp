@@ -31,13 +31,13 @@ export class TaskForm {
   inputTitle: FormControl = new FormControl('', [
     Validators.required,
     Validators.minLength(3),
-    Validators.maxLength(20)
+    Validators.maxLength(30)
   ]);
 
   inputDescription: FormControl = new FormControl('', [
     Validators.required,
     Validators.minLength(3),
-    Validators.maxLength(40)
+    Validators.maxLength(100)
   ]);
 
   inputCompleted: FormControl = new FormControl(false, [

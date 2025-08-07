@@ -14,7 +14,7 @@
       {{task.title}}
     </p>
 
-    <p class="text-sm font-medium text-gray-500 dark:text-gray-400 whitespace-normal truncate">
+    <p class="text-xs font-medium text-gray-500 dark:text-gray-400 whitespace-normal truncate">
       {{task.description}}
     </p>
 
@@ -24,7 +24,7 @@
         [context]="'task-delete'" (onClick)="deleteTask()">
       </app-button>
 
-      <app-button [id]="'tupd' + task.id" [label]="'Update'" [type]="'button'" [disabled]="false"
+      <app-button [id]="'tupd' + task.id" [label]="'View'" [type]="'button'" [disabled]="false"
         [context]="'task-update'" (onClick)="updateTask()">
       </app-button>
     </div>

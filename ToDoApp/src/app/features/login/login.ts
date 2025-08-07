@@ -5,10 +5,11 @@ import { Button } from '../../shared/components/button/button';
 import { IRootStateModel } from '../../state/models/states/root.state.model';
 import { Store } from '@ngrx/store';
 import { loadUserTokenAction } from '../../state/actions/token.actions';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule, Button],
+  imports: [ReactiveFormsModule, Button, CommonModule],
   templateUrl: './login.html',
   styleUrl: './login.scss',
   standalone: true,
