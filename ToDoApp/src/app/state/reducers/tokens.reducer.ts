@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
 import { ITokensState } from "../models/interfaces/tokens.interface";
-import { loadUserTokenAction, loadUserTokenErrorAction, loadUserTokenSuccessAction } from "../actions/token.actions";
+import { loadUserTokenAction, loadUserTokenErrorAction, loadUserTokenSuccessAction, revokeUserTokenAction, revokeUserTokenErrorAction, revokeUserTokenSuccessAction } from "../actions/token.actions";
 
 export const initialTokensState: ITokensState = {
   loading: false,
@@ -20,5 +20,11 @@ export const tokensReducer = createReducer(
   }),
     on(loadUserTokenErrorAction, (state: ITokensState) => {
     return { ...state, loading: false, loadSuccess: false, loadError: true };
+  }),
+  on(revokeUserTokenAction, (state: ITokensState) => {
+    return { ...state, loading: true, loadSuccess: true, loadError: false };
+  }),
+  on(revokeUserTokenErrorAction, (state: ITokensState) => {
+    return { ...state, loading: false, loadSuccess: true, loadError: false };
   }),
 );

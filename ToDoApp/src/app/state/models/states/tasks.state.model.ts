@@ -1,7 +1,5 @@
 import { ITasksState } from "../interfaces/tasks.interfaces";
-import { ITokensState } from "../interfaces/tokens.interface";
 
 export interface IRootStateModel {
-  tokens: ITokensState;
   tasks: ITasksState;
 }

@@ -33,7 +33,7 @@ export class ApiService {
     return this.http.get(url, options);
   }
 
-  commonPostRequest(url: string, body: any, headers: CustomHeaders = {}, params: CustomParams = {}) {
+  commonPostRequest(url: string, body: Object = {}, headers: CustomHeaders = {}, params: CustomParams = {}) {
     var options = {
       headers: this.defaultHeaders(headers),
       params: this.loadParams(params)
@@ -42,7 +42,7 @@ export class ApiService {
     return this.http.post(url, body, options);
   }
 
-  commonPutRequest(url: string, body: any, headers: CustomHeaders = {}, params: CustomParams = {}) {
+  commonPutRequest(url: string, body: Object = {}, headers: CustomHeaders = {}, params: CustomParams = {}) {
     var options = {
       headers: this.defaultHeaders(headers),
       params: this.loadParams(params)

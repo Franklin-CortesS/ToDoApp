@@ -16,3 +16,15 @@ export const loadUserTokenSuccessAction = createAction(
 export const loadUserTokenErrorAction = createAction(
   '[Token] Load User Token Error',
 );
+
+export const revokeUserTokenAction = createAction(
+  '[Token] Revoke User Token',
+);
+
+export const revokeUserTokenSuccessAction = createAction(
+  '[Token] Revoke User Token Success',
+);
+
+export const revokeUserTokenErrorAction = createAction(
+  '[Token] Revoke User Token Error',
+);
