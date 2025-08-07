@@ -16,9 +16,20 @@ jobs:
         with:
           node-version: 22
 
+      - name: Install build tools
+        run: sudo apt-get update && sudo apt-get install -y build-essential python3
+
+      - name: Clean node_modules
+        working-directory: ToDoApp
+        run: rm -rf node_modules package-lock.json
+
       - name: Install dependencies
         working-directory: ToDoApp
-        run: npm ci
+        run: npm ci --prefer-offline=false --no-cache
+
+      - name: Rebuild lightningcss native binary
+        working-directory: ToDoApp
+        run: npm rebuild lightningcss
 
       - name: Run Tests and Check Coverage
         working-directory: ToDoApp
