@@ -84,7 +84,7 @@ describe('TaskForm', () => {
     expect(title.hasError('required')).toBeTrue();
     title.setValue('aa');
     expect(title.hasError('minlength')).toBeTrue();
-    title.setValue('a'.repeat(21));
+    title.setValue('a'.repeat(100));
     expect(title.hasError('maxlength')).toBeTrue();
     title.setValue('Valid Title');
     expect(title.valid).toBeTrue();
@@ -93,7 +93,7 @@ describe('TaskForm', () => {
     expect(description.hasError('required')).toBeTrue();
     description.setValue('aa');
     expect(description.hasError('minlength')).toBeTrue();
-    description.setValue('a'.repeat(41));
+    description.setValue('a'.repeat(110));
     expect(description.hasError('maxlength')).toBeTrue();
     description.setValue('Valid Description');
     expect(description.valid).toBeTrue();
